@@ -6,14 +6,17 @@ using System.Collections.Generic;
 
 namespace HelloWorldWorkflow
 {
+    public class Person
+    {
+        public string Name { get; set; }
+        public string Sex { get; set; }
+    }
 
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Person p = new Person();
-
-
 
             Console.WriteLine("Are you male or female?");
             string sex = Console.ReadLine();
@@ -36,9 +39,10 @@ namespace HelloWorldWorkflow
         }
     }
 
-    public class Person
-    {
-        public string Name { get; set; }
-        public string Sex { get; set; }
-    }
+    
 }
+
+//namespace HelloWorldWorkflow.Entity
+//{
+
+//}

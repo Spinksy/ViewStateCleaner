@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Activity x:Class="HelloWorldWorkflow.HelloWorld" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Input" Type="InArgument(x:String)" />
+  </x:Members>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>HelloWorldWorkflow</x:String>
+      <x:String>System.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>HelloWorldWorkflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sads:DebugSymbol.Symbol="dzxDOlxEZXZcSGVsbG9Xb3JsZFdvcmtmbG93XEhlbGxvV29ybGRXb3JrZmxvd1xIZWxsb1dvcmxkLnhhbWwHKgM0DgIBASsFMgoCAQIrEys9AgEDLQktWQIBBzAJMFsCAQUtRy1WAgEIMEcwWAIBBg==">
+    <If Condition="[String.Equals(Input, &quot;Male&quot;)]">
+      <If.Then>
+        <WriteLine Text="Glenn is male" />
+      </If.Then>
+      <If.Else>
+        <WriteLine Text="Gemma is female" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
